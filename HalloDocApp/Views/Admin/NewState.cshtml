@@ -1,0 +1,175 @@
+﻿@model HalloDocApp.Entities.ViewModels.Admin.Dashboard
+
+
+<table class="table">
+    <thead>
+        <tr class="table-secondary">
+            <th>Name</th>
+            <th>Date Of Birth</th>
+            <th>Requestor</th>
+            <th>Requested Date</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Notes</th>
+            <th>Chat With</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @for (int i = 0; i < Model.Requests.Count; i++)
+        {
+            string rowclass = "";
+
+            if (Model.Requests[i].Requesttypeid == 1)
+                rowclass = "table-success";
+            else if (Model.Requests[i].Requesttypeid == 2)
+                rowclass = "table-warning";
+            else if (Model.Requests[i].Requesttypeid == 3)
+                rowclass = "table-primary";
+            else
+                rowclass = "table-danger";
+
+            <tr class="@rowclass">
+                <td>@Model.RequestClients[i].Firstname</td>
+                <td>@GetMonth(int.Parse(Model.RequestClients[i].Strmonth)) @Model.RequestClients[i].Intdate,@Model.RequestClients[i].Intyear</td>
+                <td>@getRequestType(Model.Requests[i].Requesttypeid) @Model.Requests[i].Firstname</td>
+                <td>@Model.Requests[i].Createddate</td>
+                <td class="@(Model.Requests[i].Requesttypeid==1?"":"d-flex flex-column")">
+                    <button class="btn btn-outline-secondary"><i class="bi bi-telephone">@Model.RequestClients[i].Phonenumber</i></button>
+                    <p> (Patient)</p>
+
+                    @if (Model.Requests[i].Requesttypeid != 1)
+                    {
+                        <button class="btn btn-outline-secondary"><i class="bi bi-telephone">@Model.Requests[i].Phonenumber</i></button>
+                        @getRequestType(Model.Requests[i].Requesttypeid)
+                    }
+                </td>
+
+                <td>@Model.RequestClients[i].Street,@Model.RequestClients[i].City,@Model.RequestClients[i].State</td>
+                <td>@Model.RequestClients[i].Notes</td>
+                <td><button class="btn btn-outline-secondary"> <i class="bi bi-person-circle p-1"></i> Provider</button></td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Actions
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#assignCase" onclick="assignModal(@Model.Requests[i].Requestid)">Assign Case</button></li>
+                            @* <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#dashboardModal_@i">Cancel Case</button></li> *@
+                            <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#dashboardModal" onclick="cancelModal(@Model.Requests[i].Requestid,'@Model.RequestClients[i].Firstname')">Cancel Case</button></li>
+                            <li><a class="dropdown-item" asp-route-reqId="@Model.RequestClients[i].Requestclientid" asp-action="ViewCase" asp-controller="Admin">View Case</a></li>
+                            <li><a class="dropdown-item" asp-route-reqId="@Model.RequestClients[i].Requestclientid" asp-action="ViewNotes" asp-controller="Admin">View Notes</a></li>
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#blockCase" onclick="blockModal(@Model.Requests[i].Requestid,'@Model.RequestClients[i].Firstname','@Model.RequestClients[i].Email','@Model.RequestClients[i].Phonenumber')">Block Patient</a></li>
+                        </ul>
+                    </div>
+                </td>
+
+            </tr>
+            @* <div class="container">
+                <div class="modal fade" id="dashboardModal_@i" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <div class="modal-header bg-info">
+                                <h5 class="modal-title" style="color:white;">Confirm Cancellation</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="d-flex ">
+                                    <h5>Patient Name : </h5>
+                                    <p class="px-1 mx-1 text-info fs-5"> @Model.RequestClients[i].Firstname</p>
+                                </div>
+                                <select class="form-select" id="SelectData_@i" aria-label="Default select example">
+                                    <option value="" selected>Reasons For Cancellation</option>
+                                    <option value="Out of service area">Out of service area</option>
+                                    <option value="No Response to call or text, left message">No Response to call or text</option>
+                                    <option value="Cost Issue">Cost Issue</option>
+
+                                </select>
+                                <br />
+                                <div class="form-group">
+                                    <textarea class="form-control" id="notes_@i"
+                                              rows="4" placeholder="Enter brief details of Symptoms">Provide Additional Notes</textarea>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <a class="btn btn-primary btn-outline-light bg-info" id="Confirm" onclick="cancelData(@Model.RequestClients[i].Requestid,'@i')">Confirm</a>
+                                <button type="button" class="btn btn-secondary btn-outline-info bg-white" data-bs-dismiss="modal" style="color:skyblue;">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ *@
+
+
+
+
+         
+
+        }
+    </tbody>
+</table>
+<script>
+   @*  function cancelData(reqId, modalId) {
+        debugger
+        var reason = document.getElementById("SelectData_" + modalId).value;
+        var notes = document.getElementById("notes_" + modalId).value;
+
+        $.ajax({
+            url: '/admin/CancelCase',
+            type: 'POST',
+            data: {
+                reqId: reqId,
+                reason: reason,
+                notes: notes,
+            },
+            success: function (response) {
+                if (response.success) {
+                    alert("Success");
+                    window.location.reload();
+                }
+            },
+            error: function () {
+                alert('Error');
+            }
+        })
+    } *@
+</script>
+
+@functions {
+    public string GetMonth(int month)
+    {
+        switch (month)
+        {
+            case 1: return "January";
+            case 2: return "February";
+            case 3: return "March";
+            case 4: return "April";
+            case 5: return "May";
+            case 6: return "June";
+            case 7: return "July";
+            case 8: return "August";
+            case 9: return "September";
+            case 10: return "October";
+            case 11: return "November";
+            case 12: return "December";
+            default: return "";
+        }
+    }
+
+    public string getRequestType(int requestType)
+    {
+        switch (requestType)
+        {
+            case 1: return "Patient";
+            case 2: return "Family/Friend";
+            case 3: return "Concierge";
+            case 4: return "Business";
+            default: return "";
+        }
+    }
+}
+
+

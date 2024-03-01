@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <title>Patient - Submit request</title>
+
+</head>
+
+<body>
+    <div>
+        <div class="card shadow">
+            <img class="patient-request-logo" src="~/images/hallodoc-logo.png">
+            <i class="far fa-moon moon-icon p-2 my-1" onclick="toggle_light_mode()"></i>
+            <!-- <i class="fa-solid fa-moon d-none moon-icon"></i> -->
+        </div>
+
+        <div class="d-flex flex-column align-items-center m-3 patient-request-content-area">
+            <div class="d-flex flex-column justify-content-between">
+                <h2 class="head-font">I am a...</h2>
+
+                <a asp-route="PatientSite" class="btn btn-outline-primary btn-back btn-back-submit-request">Back</a>
+            </div>
+            <a asp-route="PatientCreateRequest" class="btn-patient btn-1">PATIENT</a>
+            <a asp-route="PatientFamilyFriendRequest" class="btn-patient btn-2">FAMILY / FRIEND</a>
+            <a asp-route="PatientConciergeRequest" class="btn-patient btn-3">CONCIERGE</a>
+            <a asp-route="PatientBusinessRequest" class="btn-patient btn-4">BUSINESS PARTNERS</a>
+        </div>
+        <div class="d-flex flex-column align-items-end footer-area p-3">
+            Terms & conditions | Privacy Policy
+        </div>
+       
+    </div>
+    <script src="~/js/patient-submit-request.js"></script>
+</body>
+
+</html>

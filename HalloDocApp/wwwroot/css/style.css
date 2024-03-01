@@ -1,0 +1,314 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.backimage {
+    background: url("../images/7768657_3763028.jpg") no-repeat center center;
+    background-size: contain;
+    opacity: 0.1;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-area {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+}
+
+.login {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.log-in-btn {
+    width: 100%;
+}
+
+.forgot-pwd {
+    text-decoration: none;
+}
+
+.back::before {
+    content: "< ";
+}
+
+.back {
+    text-decoration: none;
+}
+
+.pwd-icon {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.user-icon {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.moon-icon {
+    position: absolute;
+    right: 0px;
+    border: 2px solid skyblue;
+    color: skyblue;
+    border-radius: 5px;
+}
+
+.patient-request-logo {
+    height: 50px;
+    width: 100px;
+}
+
+.footer-area {
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-create-request {
+    position: sticky;
+}
+
+.head-font {
+    font-family: 'Poppins';
+}
+
+.patient-request-content-area {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn-back-submit-request {
+    position: absolute;
+    right: 20%;
+    top: 6%;
+}
+
+.btn-back::before {
+    content: "< ";
+}
+
+.btn-patient {
+    border: none;
+    border-radius: 10px;
+    width: 25%;
+    height: 60px;
+    text-align: left;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    padding-top: 0;
+    text-decoration: none;
+}
+
+    .btn-patient:hover {
+        background-color: white;
+    }
+
+.btn-1 {
+    color: rgb(102, 26, 255);
+    background-color: rgb(242, 230, 255);
+    border: 1px solid rgb(102, 26, 255);
+}
+
+.btn-2 {
+    color: rgb(0, 153, 255);
+    background-color: rgb(204, 235, 255);
+    border: 1px solid rgb(0, 153, 255);
+}
+
+.btn-3 {
+    color: rgb(0, 153, 0);
+    background-color: rgb(234, 250, 234);
+    border: 1px solid rgb(0, 153, 0);
+}
+
+.btn-4 {
+    color: rgb(255, 26, 255);
+    background-color: rgb(255, 230, 255);
+    border: 1px solid rgb(255, 26, 255);
+}
+
+@media screen and (max-width: 800px) {
+    .btn-patient {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .btn-patient {
+        width: 100%;
+    }
+}
+
+body[light-mode="dark"] {
+    color: white;
+    background-color: #141516;
+   
+
+    {
+        background-color: white;
+        color: black;
+    }
+
+}
+
+.main-patient-page-area {
+    width: fit-content;
+    background-color: black;
+    position: relative;
+}
+
+.patient_site_btn {
+    height: 75px;
+    width: 300px;
+    background-color: rgb(5, 184, 255);
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding: 20px 30px;
+}
+
+.register-btn {
+    background-color: blue;
+}
+
+.iti {
+    width: 100%;
+    z-index: 14;
+}
+
+    .iti .form-control {
+        height: 58px;
+    }
+
+.warning-icon {
+    color: orange;
+}
+
+.btn-create-request {
+    position: relative;
+    margin-left: 70%;
+    color: skyblue;
+    border: 2px solid skyblue;
+}
+
+.dashboard-head {
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    font-size: 25px;
+}
+
+.dashboard-btn {
+    position: absolute;
+    right: 3%;
+    color: skyblue;
+    border: 2px solid skyblue;
+    top: 5%;
+}
+
+.btn-view-doc {
+    position: absolute;
+    top: 13%;
+    color: skyblue;
+    border: 1px solid skyblue;
+    font-size: 20px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .dashboard-head {
+        right: 30%;
+    }
+
+    .dashboard-btn {
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dashboard-head {
+        right: 30%;
+    }
+
+    .dashboard-btn {
+        right: 10%;
+    }
+
+    .btn-create-request {
+        margin-left: 60%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .dashboard-head {
+        display: none;
+    }
+
+    .dashboard-btn {
+        right: 10%;
+    }
+
+    .btn-create-request {
+        margin-left: 40%;
+    }
+}
+
+
+input[type="file"] {
+    margin-left: -2px !important;
+}
+
+    input [type="file"]::-webkit-file-upload-button {
+        display: none;
+    }
+
+    input[type="file"]::file-selector-button {
+        display: none;
+    }
+
+
+.input-group-text {
+    color: white;
+    background-color: #01BCE9;
+}
+
+.nav-underline .nav-link.active {
+    color: var(--bs-nav-link-color)
+}
+
+.nav-link {
+    color: var(--bs-nav-underline-link-active-color)
+}
+
+.form-floating > label {
+    left: 10px;
+}
+
+.valid-text {
+    color: green; /* Example style for valid text */
+}
+
+.invalid-text {
+    color: red; /* Example style for invalid text */
+}
+/* Override the [hidden] style to ensure the button is displayed */
+#saveBtn[hidden] {
+   
+}
+
+.hidden{
+    display:none;
+}

@@ -1,0 +1,69 @@
+﻿@model HalloDocApp.Entities.ViewModels.Admin.Dashboard
+
+<table class="table">
+    <thead>
+        <tr class="table-secondary">
+            <th>Name</th>
+            <th>Date Of Birth</th>
+            <th>Requestor</th>
+            <th>Requested Date</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Notes</th>
+            <th>Chat With</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @for (int i = 0; i < Model.Requests.Count; i++)
+        {
+            <tr>
+                <td>@Model.Requests[i].Firstname</td>
+                <td>@GetMonth(int.Parse(Model.RequestClients[i].Strmonth)) @Model.RequestClients[i].Intdate,@Model.RequestClients[i].Intyear</td>
+                <td>@Model.RequestClients[i].Firstname</td>
+                <td>@Model.Requests[i].Createddate</td>
+                <td><button class="btn border"><i class="bi bi-telephone">@Model.RequestClients[i].Phonenumber</i></button></td>
+                <td>@Model.RequestClients[i].Street,@Model.RequestClients[i].City,@Model.RequestClients[i].State</td>
+                <td>@Model.Requests[i].Email</td>
+                <td><button class="btn border"> <i class="bi bi-person-circle p-1"></i> Provider</button></td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle p-1"></i> Actions
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" asp-action="ViewCase" asp-controller="Admin">View Case</a></li>
+                            <li><a class="dropdown-item" asp-action="" asp-controller="Admin">View Uploads</a></li>
+                            <li><a class="dropdown-item" asp-action="ViewNotes" asp-controller="Admin">View Notes</a></li>
+                        </ul>
+                    </div>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+@functions {
+    public string GetMonth(int month)
+    {
+        switch (month)
+        {
+            case 1: return "January";
+            case 2: return "February";
+            case 3: return "March";
+            case 4: return "April";
+            case 5: return "May";
+            case 6: return "June";
+            case 7: return "July";
+            case 8: return "August";
+            case 9: return "September";
+            case 10: return "October";
+            case 11: return "November";
+            case 12: return "December";
+            default: return "";
+        }
+    }
+}

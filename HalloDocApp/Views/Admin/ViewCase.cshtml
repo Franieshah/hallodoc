@@ -1,0 +1,145 @@
+﻿    @model HalloDocApp.Entities.ViewModels.Admin.ViewCase
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/admin_style.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>View Case</title>
+</head>
+<body class="bg-light">
+
+
+    <partial name="~/Views/Admin/_PartialViews/_header.cshtml" />
+    <div class="container pt-2">
+
+        <div class="d-flex justify-content-between py-3">
+            <div class="d-flex align-items-center">
+                <h4>
+                    New Request
+
+                    @{
+                        string rowclass = "";
+
+                        if (Model.requestType == 1)
+                            rowclass = "text-bg-success";
+                        else if (Model.requestType == 2)
+                            rowclass = "text-bg-warning";
+                        else if (Model.requestType == 3)
+                            rowclass = "text-bg-info";
+                        else
+                            rowclass = "text-bg-danger";
+                    }
+
+
+                    <span class="badge rounded-pill @rowclass">@getRequestType(Model.requestType)</span>
+                </h4>
+            </div>
+            <a asp-action="Dashboard" asp-controller="Admin" class="btn btn-outline-primary btn-back">Back</a>
+        </div>
+        <div class="card border-0 shadow p-3">
+            <h5>Patient Information</h5>
+            <br />
+            <small>Confirmation Number</small>
+            <p class="m-0 p-0 text-info fw-bold fs-5">@Model.confirmationNumber</p>
+            <br />
+            <form>
+                <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                              placeholder="Patient Notes" disabled></textarea>
+                </div>
+                <div class="row my-3">
+                    <div class="col-sm-12  col-md-6 form-floating my-3">
+                        <input class="form-control" type="text" placeholder="First Name" id="firstname" value="@Model.requestclient.Firstname" disabled>
+                        <label for="firstname" class="mx-3">First Name</label>
+                    </div>
+                    <div class="col-sm-12 col-md-6 form-floating my-3">
+                        <input class="form-control" type="text" placeholder="Last Name" id="lastname" value="@Model.requestclient.Lastname" disabled>
+                        <label for="lastname" class="mx-3">Last Name</label>
+                    </div>
+
+
+                    <div class="col-sm-12  col-md-6 form-floating my-3">
+                        <input class="form-control" type="date" placeholder="First Name" id="dateOfBirth" value="@Model.requestclient.Intdate @Model.requestclient.Strmonth @Model.requestclient.Intyear" disabled>
+                        <label for="dateOfBirth" class="mx-3">Date Of Birth</label>
+                    </div>
+                    <div class="col-sm-12 col-md-6 form-floating my-3">
+                        <input type="hidden" id="patientCountryCode" />
+                        <input type="tel" id="patientMobileNumber" class="form-control" onchange="validatePhoneNumber()" value="@Model.requestclient.CountryCode @Model.requestclient.Phonenumber" disabled>
+
+                        <span id="textChange"></span>
+                    </div>
+
+                    <div class="col-sm-12  col-md-6 form-floating my-3">
+                        <input class="form-control" type="email" placeholder="Email" id="email" value="@Model.requestclient.Email" disabled>
+                        <label for="email" class="mx-3">Email</label>
+                    </div>
+
+                    @if (Model.status != 1)
+                    {
+                        <div class="col-sm-12  col-md-6 form-floating my-4">
+                            <button class="btn btn-info" type="button">Edit</button>
+                        </div>
+                    }
+                </div>
+
+                <h3>Location Information</h3>
+                <div class="row my-3">
+                    <div class="col-sm-12  col-md-6 form-floating my-3">
+                        <input class="form-control" type="text" placeholder="text" id="region" value="@Model.requestclient.Street" disabled>
+                        <label for="region" class="mx-3">Region</label>
+                    </div>
+                    <div class="col-sm-12  col-md-6 form-floating my-3">
+                        <input class="form-control" type="text" placeholder="" id="businessName" disabled>
+                        <label for="businessName" class="mx-3">Business Name/Address</label>
+                    </div>
+                    <div class="col-sm-12  col-md-6 form-floating my-3">
+                        <input class="form-control" type="text" placeholder="Email" id="roomNo" disabled>
+                        <label for="roomNo" class="mx-3">Room #</label>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    @if (Model.status == 1)
+                    {
+                        <button type="button" class="btn btn-info mx-2 text-white">Assign</button>
+                    }
+                    <button type="button" class="btn btn-info mx-2 text-white">View Notes</button>
+                    @if (Model.status == 1)
+                    {
+                        <a type="button" class="btn btn-danger mx-2" asp-route-reqId="@Model.requestclient.Requestid" asp-action="cancelCase" asp-controller="Admin">Cancel</a>
+                    }
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+</body>
+</html>
+
+@functions {
+    public string getRequestType(int requestType)
+    {
+        switch (requestType)
+        {
+            case 1: return "Patient";
+            case 2: return "Family/Friend";
+            case 3: return "Concierge";
+            case 4: return "Business";
+            default: return "";
+        }
+    }
+
+}
+
+

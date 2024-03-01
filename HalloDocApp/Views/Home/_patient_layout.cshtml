@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  
+    <title>@ViewData["Title"] </title>
+
+</head>
+
+<body>
+     <div class="container">     
+         <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+             <div class="modal-dialog modal-dialog-centered">
+                 <div class="modal-content">
+
+                     <div class="modal-body">
+
+                         <center>  <h1> <i class="bi bi-exclamation-circle warning-icon"></i></h1></center>
+                         <center> <h5 class="modal-title" id="exampleModalLabel">Information</h5></center>
+                         When submitting a request, you must provide the correct contact information for the patient or
+                         the responsibly party.Failure to provide the correct email and phone number will delay service
+                         or be declined.
+
+                         <center> <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button></center>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+    <div class="bg-light">
+        <partial name="~/Views/Home/_header.cshtml" />
+        <div class="container">
+        @RenderBody()
+        </div>
+        <partial name="~/Views/Home/_footer.cshtml" />
+        
+    </div>
+    <script src="~/js/site.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

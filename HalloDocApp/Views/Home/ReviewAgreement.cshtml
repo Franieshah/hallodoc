@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <title>Review Agreement</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="modal fade" id="reviewAgreementModal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Cancel Confirmation</h5>
+                    </div>
+                    <div class="modal-body">
+
+                        <p>Test Test, </p>
+                        <div class="form-group">
+                        <textarea class="form-control" rows="3">Please provide a brief explaination for your cancelation</textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Confirm</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h4 class="my-5">To provide best medical service,we cannot determine the cost right away.
+            If you agree to our service ,so we will provide care and follow-up until all care is completed.
+            So with this points,if you like us to provide care to you click on "Agree"
+            and we'll get started immediately, if you do not agree simply click "Cancel". </h4>
+
+        <div class="d-flex justify-content-between mx-5">
+            <button class="btn btn-success">I Agree</button>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#reviewAgreementModal">Cancel</button>
+        </div>
+    </div>
+</body>
+
+<script src="~/js/bootstrap.bundle.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+</html>

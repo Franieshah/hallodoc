@@ -1,0 +1,401 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\HalloDocApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\HalloDocApp.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\css\\admin_style.css",
+      "PackagePath": "staticwebassets\\css\\admin_style.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\downloads\\Request_11_Files.zip",
+      "PackagePath": "staticwebassets\\downloads\\Request_11_Files.zip"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\images\\11116016_415.jpg",
+      "PackagePath": "staticwebassets\\images\\11116016_415.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\images\\7768657_3763028.jpg",
+      "PackagePath": "staticwebassets\\images\\7768657_3763028.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\images\\7774236_3736765.jpg",
+      "PackagePath": "staticwebassets\\images\\7774236_3736765.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\images\\hallo-doc.png",
+      "PackagePath": "staticwebassets\\images\\hallo-doc.png"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\images\\hallodoc-logo.png",
+      "PackagePath": "staticwebassets\\images\\hallodoc-logo.png"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\js\\admin.js",
+      "PackagePath": "staticwebassets\\js\\admin.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\js\\map.js",
+      "PackagePath": "staticwebassets\\js\\map.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\js\\patient-forgot-password.js",
+      "PackagePath": "staticwebassets\\js\\patient-forgot-password.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\js\\patient-login.js",
+      "PackagePath": "staticwebassets\\js\\patient-login.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\js\\patient-signup.js",
+      "PackagePath": "staticwebassets\\js\\patient-signup.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\js\\patient-submit-request.js",
+      "PackagePath": "staticwebassets\\js\\patient-submit-request.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig17.Transfer.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig17.Transfer.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig18.Clear Case.png",
+      "PackagePath": "staticwebassets\\uploads\\Fig18.Clear Case.png"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig19.Send Agreement pop-up.png",
+      "PackagePath": "staticwebassets\\uploads\\Fig19.Send Agreement pop-up.png"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig20.Close case.png",
+      "PackagePath": "staticwebassets\\uploads\\Fig20.Close case.png"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig22 Regions menu.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig22 Regions menu.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig23.Request Support.png",
+      "PackagePath": "staticwebassets\\uploads\\Fig23.Request Support.png"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig35. Provider on call (MDs On Call).jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig35. Provider on call (MDs On Call).jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig36. Requested Shift.png",
+      "PackagePath": "staticwebassets\\uploads\\Fig36. Requested Shift.png"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig4. Admin dashboard in New state.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig4. Admin dashboard in New state.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig43. Patient history.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig43. Patient history.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig44. Patient Record Explore.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig44. Patient Record Explore.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig5. Admin dashboard in pending state.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig5. Admin dashboard in pending state.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig56. Patient site.png",
+      "PackagePath": "staticwebassets\\uploads\\Fig56. Patient site.png"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig57.Submit request screen.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig57.Submit request screen.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig58. Create Patient request.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig58. Create Patient request.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig59.1.FamilyFriend Information1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig59.1.FamilyFriend Information1.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig59.FamilyFriend Information2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig59.FamilyFriend Information2.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig8. Admin dashboard in To Close state.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig8. Admin dashboard in To Close state.jpg"
+    },
+    {
+      "Id": "D:\\Project\\HalloDocApp\\HalloDocApp\\wwwroot\\uploads\\Fig9. Admin dashboard in Unpaid state.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Fig9. Admin dashboard in Unpaid state.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.HalloDocApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.HalloDocApp.props",
+      "PackagePath": "build\\HalloDocApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.HalloDocApp.props",
+      "PackagePath": "buildMultiTargeting\\HalloDocApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.HalloDocApp.props",
+      "PackagePath": "buildTransitive\\HalloDocApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

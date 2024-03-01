@@ -1,0 +1,14 @@
+D:\Project\HalloDocApp\HalloDocApp.Entities\bin\Debug\net7.0\HalloDocApp.Entities.deps.json
+D:\Project\HalloDocApp\HalloDocApp.Entities\bin\Debug\net7.0\HalloDocApp.Entities.runtimeconfig.json
+D:\Project\HalloDocApp\HalloDocApp.Entities\bin\Debug\net7.0\HalloDocApp.Entities.dll
+D:\Project\HalloDocApp\HalloDocApp.Entities\bin\Debug\net7.0\HalloDocApp.Entities.pdb
+D:\Project\HalloDocApp\HalloDocApp.Entities\obj\Debug\net7.0\HalloDocApp.Entities.csproj.AssemblyReference.cache
+D:\Project\HalloDocApp\HalloDocApp.Entities\obj\Debug\net7.0\HalloDocApp.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\HalloDocApp\HalloDocApp.Entities\obj\Debug\net7.0\HalloDocApp.Entities.AssemblyInfoInputs.cache
+D:\Project\HalloDocApp\HalloDocApp.Entities\obj\Debug\net7.0\HalloDocApp.Entities.AssemblyInfo.cs
+D:\Project\HalloDocApp\HalloDocApp.Entities\obj\Debug\net7.0\HalloDocApp.Entities.csproj.CoreCompileInputs.cache
+D:\Project\HalloDocApp\HalloDocApp.Entities\obj\Debug\net7.0\HalloDocApp.Entities.dll
+D:\Project\HalloDocApp\HalloDocApp.Entities\obj\Debug\net7.0\refint\HalloDocApp.Entities.dll
+D:\Project\HalloDocApp\HalloDocApp.Entities\obj\Debug\net7.0\HalloDocApp.Entities.pdb
+D:\Project\HalloDocApp\HalloDocApp.Entities\obj\Debug\net7.0\HalloDocApp.Entities.genruntimeconfig.cache
+D:\Project\HalloDocApp\HalloDocApp.Entities\obj\Debug\net7.0\ref\HalloDocApp.Entities.dll

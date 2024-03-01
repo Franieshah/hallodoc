@@ -1,0 +1,199 @@
+@using HalloDocApp.Entities.Enum;
+@model HalloDocApp.Entities.ViewModels.PatientRequest;
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+
+    <title>Request For Someone Else</title>
+
+</head>
+
+<body>
+
+    <div class="bg-light">
+        <div class="card shadow">
+            <img class="patient-request-logo" src="~/images/hallodoc-logo.png">
+
+            <button class="btn btn-outline-primary dashboard-btn">LogOut</button>
+            <i class="far fa-moon moon-icon p-2 my-1" onclick="toggle_light_mode()"></i>
+
+
+        </div>
+        <div class="container tab-content" id="myTabContent">
+          
+
+        <div class="container bg-white  my-5 pb-5 mb-5">
+                            <h2>Submit Information</h2>
+                <div class="d-flex justify-content-end mx-5">
+                    <a asp-route="PatientDashboard" class="btn btn-outline-primary btn-back">Back</a>
+                 </div>
+
+
+
+
+                <form asp-action="SubmitRequestForSomeoneElse" asp-controller="Home" enctype="multipart/form-data">
+
+                        <h4>Patient Information</h4>
+                        <div class="form-group">
+                            <textarea asp-for="symptoms" class="form-control" id="exampleFormControlTextarea1"
+                                      rows="4" placeholder="Enter brief details of Symptoms"></textarea>
+                        <span asp-validation-for="symptoms" class="text-danger"></span>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-sm-12  col-md-6 form-floating ">
+
+                                <input asp-for="FirstName" class="form-control" placeholder="First Name" id="patientfirstname">
+                                <label for="patientfirstname">First Name</label>
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+
+                            </div>
+                            <div class="col-sm-12 col-md-6 form-floating">
+                            <input asp-for="LastName" class="form-control" placeholder="Last Name" id="patientlastname">
+                                    <label for="lastname">Last Name</label>
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-sm-12 col-md-6 form-floating">
+                            <input asp-for="DateOfBirth" id="dateOfBirth" type="date" class="form-control">
+                                <label>Date of Birth</label>
+                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+
+
+
+                            </div>
+                        </div>
+                        <h3>Patient Contact Information</h3>
+                        <div class="row my-3">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group form-floating">
+                                <input asp-for="Email"  class="form-control" placeholder="Enter email" id="patientemail">
+                                    <label for="patientemail">Enter Email</label>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-floating">
+
+                                <input asp-for="phone" type="tel" id="patientMobileNumber" class="form-control" onchange="validatePhoneNumber()">
+                                    <div id="flag-container"></div>
+                                    <span id="textChange"></span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Patient Location</h3>
+                        <div class="row my-3">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group form-floating">
+                                <input asp-for="street" class="form-control" placeholder="Street" id="patientstreet">
+                                    <label for="patientstreet">Street</label>
+                                <span asp-validation-for="street" class="text-danger"></span>
+
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group form-floating">
+                                <input asp-for="city" type="text" class="form-control" placeholder="City" id="patientcity">
+                                    <label for="patientcity">City</label>
+                                <span asp-validation-for="city" class="text-danger"></span>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group form-floating">
+                                <input asp-for="state" class="form-control" placeholder="State" id="patientstate">
+                                    <label for="patientstate">State</label>
+                                <span asp-validation-for="state" class="text-danger"></span>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group form-floating">
+                                <input asp-for="zipcode" type="number" class="form-control" placeholder="Zip Code" id="patientzipcode">
+                                    <label for="patientzipcode">Zip Code</label>
+                                <span asp-validation-for="zipcode" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group form-floating">
+                                <input asp-for="roomno" type="text" class="form-control" placeholder="Room# /Suite(Optional)" id="patientroom">
+                                    <label for="patientroom">Room#/Suite Optional</label>
+
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Relation</h3>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group form-floating">
+                                <input type="text" class="form-control" placeholder="Relation With Patient(Optional)" id="patientRelation">
+                                        <label for="patientRelation">Relation With Patient</label>
+
+                                </div>
+                           </div>
+
+                        <h3>Optional(Upload Photo or Document)</h3>
+
+
+                        <div class="input-group mb-3 custom-file-input">
+                            <input asp-for="documents" class="form-control custom-file" multiple>
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">Upload</span>
+                                <span class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary mx-3">Submit</button>
+                            <button class="btn btn-outline-primary">Cancel</button>
+                        </div>
+
+
+                    </form>
+                
+
+          </div>
+
+
+        </div>
+
+
+        <div class="d-flex flex-column align-items-end footer-area p-3">
+            Terms & conditions | Privacy Policy
+        </div>
+    </div>
+
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js"></script>
+</body>
+
+</html>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
+

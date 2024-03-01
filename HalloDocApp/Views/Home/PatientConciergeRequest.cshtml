@@ -1,0 +1,174 @@
+@model HalloDocApp.Entities.ViewModels.ConciergeRequest
+@{
+    Layout = "_patient_layout";
+    ViewData["Title"] = "Patient Concierge Request";
+}
+<div class="container bg-white card shadow">
+    <h2>Concierge Information</h2>
+    <form asp-action="PatientConciergeRequest" asp-controller="Home"  >
+        <div class="row my-3">
+            <div class="col-sm-12  col-md-6 form-floating">
+                <input asp-for="FirstName" class="form-control" placeholder="Your First Name" >
+                <label asp-for ="FirstName"></label>
+                
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+              
+            </div>
+            <div class="col-sm-12 col-md-6 form-floating">
+                <input asp-for="LastName" class="form-control" type="text" placeholder="Your Last Name" id="conciergelastname" >
+                <label for="conciergelastname">Your Last Name</label>
+              
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+               
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input type="hidden" asp-for="otherCountryCode" id="OtherCountryCode" />
+                    <input asp-for="Phone" type="tel" id="OtherMobileNumber" class="form-control" onchange="validatePhoneNumberForOthers()">
+                   
+                    <span id="textChangeOther"></span>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="Email" type="email" class="form-control" placeholder="Your email" id="conciergeemail" >
+                    <label for="conciergeemail">Your Email</label>
+                    
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="hotelname" type="text" class="form-control" placeholder="Hotel/Property Name" id="hotelname" >
+                    <label for="hotelname">Hotel/Property Name</label>
+                   
+                    <span asp-validation-for="hotelname" class="text-danger"></span>
+                    
+                </div>
+            </div>
+        </div>
+        <h2>Concierge Location</h2>
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="street" type="text" class="form-control" placeholder="Street" id="conciergestreet" >
+                    <label for="conciergestreet">Street</label>
+                    
+                    <span asp-validation-for="street" class="text-danger"></span>
+                    
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="city" type="text" class="form-control" placeholder="City" id="conciergecity" >
+                    <label for="conciergecity">City</label>
+                    
+                    <span asp-validation-for="city" class="text-danger"></span>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="state" type="text" class="form-control" placeholder="State" id="conciergestate" >
+                    <label for="conciergestate">State</label>
+                    
+                    <span asp-validation-for="state" class="text-danger"></span>
+                  
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="zipcode" type="number" class="form-control" placeholder="Zip Code" id="conciergezipcode" >
+                    <label for="conciergezipcode">Zip Code</label>
+                   
+                    <span asp-validation-for="zipcode" class="text-danger"></span>
+                  
+                </div>
+            </div>
+        </div>
+        <h2>Patient Information</h2>
+
+        <div class="form-group">
+            <textarea asp-for="symptoms" class="form-control" id="exampleFormControlTextarea1" rows="4"
+                      placeholder="Enter brief details of Symptoms(Optional)"></textarea>
+            <div class="invalid-feedback">
+            <span asp-validation-for="symptoms" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-sm-12  col-md-6 form-floating">
+                <input asp-for="patientFirstName" class="form-control" type="text" placeholder="First Name" id="patientfirstname" >
+                <label for="patientfirstname">First Name</label>
+              
+                <span asp-validation-for="patientFirstName" class="text-danger"></span>
+                
+            </div>
+            <div class="col-sm-12 col-md-6 form-floating">
+                <input asp-for="patientLastName" class="form-control" type="text" placeholder="Last Name" id="patientlastname" >
+                <label for="patientlastname">Last Name</label>
+              
+                <span asp-validation-for="patientLastName" class="text-danger"></span>
+               
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6 form-floating">
+                <input asp-for="dateOfBirth" class="form-control" type="date" id="dateOfBirth" >
+                <label for="dateOfBirth">Date of Birth</label>
+                
+                <span asp-validation-for="dateOfBirth" class="text-danger"></span>
+             
+            </div>
+        </div>
+        <h3>Patient Contact Information</h3>
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="patientEmail" type="email" class="form-control" placeholder="Email" id="patientemail" >
+                    <label for="patientemail">Email</label>
+                
+                    <span asp-validation-for="patientEmail" class="text-danger"></span>
+                   
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <input type="hidden" asp-for="countryCode" id="patientCountryCode" />
+                    <input asp-for="patientPhone" type="tel" id="patientMobileNumber" class="form-control" onchange="validatePhoneNumber()" >
+                    <span id="textChange"></span>
+                    
+                </div>
+            </div>
+        </div>
+        <h3>Patient Location</h3>
+
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="roomno" type="text" class="form-control" placeholder="Room# /Suite(Optional)" id="room">
+                    <label for="room">Room#/Suite (Optional)</label>
+
+                    <span asp-validation-for="roomno" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-primary mx-3" type="submit">Submit</button>
+            <button class="btn btn-outline-primary">Cancel</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

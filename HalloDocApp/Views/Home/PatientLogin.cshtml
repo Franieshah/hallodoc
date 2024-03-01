@@ -1,0 +1,70 @@
+@model HalloDocApp.Entities.ViewModels.PatientLogin
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet"
+          href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v3.0.1/dist/bootstrap-float-label.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <title>Patient Login</title>
+</head>
+
+<body>
+  @*   <partial name="_Notification" /> *@
+    <div class="main-area">
+        <div class="backimage"></div>
+        <div class="position-absolute d-flex flex-column justify-content-between align-items-center h-100 w-100">
+            <i class="far fa-moon moon-icon p-2 my-1" onclick="toggle_light_mode()"></i>
+            <div>
+                <img src="~/images/hallodoc-logo.png">
+            </div>
+            <div>
+                <a asp-action="PatientSite" asp-controller="Home" class="back">Back</a>
+                <h3 class="login">Log In to your Account</h3>
+
+                <form asp-action="PatientLogin" asp-controller="Home">
+                    <div class="form-floating my-3">
+                        <input asp-for="Username" id="emailfield" class="form-control bg-transparent border-secondary"
+                               placeholder="" >
+                        <label for="emailfield">Username</label>
+                        <i class="bi bi-person-circle user-icon"></i>
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating  my-3">
+                        <input asp-for="Password" type="password" id="passwordfield" class="form-control bg-transparent border-secondary"
+                               placeholder="" >
+                        <label for="passwordfield">Password</label>
+
+                        <i class="bi bi-eye-slash pwd-icon" id="togglePassword"></i>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                  
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block log-in-btn">Log In</button>
+                    </div>
+                    <div class="m-3">
+                        <a asp-controller="Home" asp-action="PatientForgotPassword" class="forgot-pwd">Forget Password</a>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <p>Terms & conditions | Privacy Policy</p>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/patient-login.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <partial name="_ValidationScriptsPartial" />
+</body>
+
+
+</html>

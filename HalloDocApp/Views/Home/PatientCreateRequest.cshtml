@@ -1,0 +1,130 @@
+@model HalloDocApp.Entities.ViewModels.PatientRequest
+@{
+    Layout = "_patient_layout";
+    ViewData["Title"] = "Patient Create Request";
+}
+
+<div class="container bg-white card shadow my-5">
+    <h2>Patient Information</h2>
+    <form asp-action="PatientCreateRequest" asp-controller="Home" enctype="multipart/form-data">
+        <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" asp-for="symptoms"
+                      rows="4" placeholder="Enter brief details of Symptoms"></textarea>
+        </div>
+        <div class="row my-3">
+            <div class="col-sm-12  col-md-6 form-floating ">
+
+                <input asp-for="FirstName" type="text" class="form-control" placeholder="First Name" id="patientfirstname">
+                <label for="patientfirstname">First Name</label>
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+
+            </div>
+            <div class="col-sm-12 col-md-6 form-floating">
+                <input asp-for="LastName" type="text" class="form-control" placeholder="Last Name" id="patientlastname">
+                <label for="lastname">Last Name</label>
+
+                <span asp-validation-for="LastName" class="text-danger"></span>
+
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6 form-floating">
+                <input asp-for="DateOfBirth" id="dateOfBirth" type="date" class="form-control">
+                <label>Date of Birth</label>
+
+                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+
+            </div>
+        </div>
+        <h3>Patient Contact Information</h3>
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="Email" class="form-control" placeholder="Enter email" id="patientemail">
+                    <label for="patientemail">Enter Email</label>
+
+                    <span asp-validation-for="Email" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-floating">
+                    <input type="hidden" asp-for="countryCode" id="patientCountryCode" />
+                    <input asp-for="phone" type="tel" id="patientMobileNumber" class="form-control" onchange="validatePhoneNumber()">
+                    <div id="flag-container"></div>
+                    <span id="textChange"></span>
+                   
+                </div>
+            </div>
+        </div>
+        <h3>Patient Location</h3>
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="street" class="form-control" placeholder="Street" id="patientstreet">
+                    <label for="patientstreet">Street</label>
+
+                    <span asp-validation-for="street" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input type="text" asp-for="city" class="form-control" placeholder="City" id="patientcity">
+                    <label for="patientcity">City</label>
+
+                    <span asp-validation-for="city" class="text-danger"></span>
+
+                </div>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="state" class="form-control" placeholder="State" id="patientstate">
+                    <label for="patientstate">State</label>
+
+                    <span asp-validation-for="state" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="zipcode" type="number" class="form-control" placeholder="Zip Code" id="patientzipcode">
+                    <label for="patientzipcode">Zip Code</label>
+                    <span asp-validation-for="zipcode" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group form-floating">
+                    <input asp-for="roomno" type="text" class="form-control" placeholder="Room# /Suite(Optional)" id="patientroom">
+                    <label for="patientroom">Room#/Suite Optional</label>
+
+                </div>
+            </div>
+        </div>
+        <h3>Optional(Upload Photo or Document)</h3>
+
+
+        <div class="input-group mb-3 custom-file-input">
+            <input asp-for="documents" class="form-control custom-file" multiple>
+            <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">Upload</span>
+                <span class="text-danger"></span>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-primary mx-3">Submit</button>
+            <button class="btn btn-outline-primary">Cancel</button>
+        </div>
+    </form>
+</div>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
+
